@@ -27,14 +27,14 @@ html {
 }
 
 header {
-	background: linear-gradient(rgba($yt-red1, 0.25), rgba($yt-red1, 0.6)),
+	align-items: center;
+	background: linear-gradient(rgba($yt-red1, 0.5), rgba($yt-red1, 0.85)),
 		url(../img/tv_bg.jpg) no-repeat center center fixed;
 	background-size: cover;
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
 	height: em(400px);
+	justify-content: center;
 	width: 100%;
 
 	form#search-form {
@@ -73,8 +73,8 @@ header {
 }
 
 main {
-	width: 60%;
 	margin: em(20px) auto;
+	width: 60%;
 	p {
 		color: $yt-red1;
 		font-size: em(24px);

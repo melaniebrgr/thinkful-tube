@@ -363,13 +363,13 @@ html {
   font-family: 'Poppins', sans-serif; }
 
 header {
-  background: linear-gradient(rgba(229, 45, 39, 0.25), rgba(229, 45, 39, 0.6)), url(../img/tv_bg.jpg) no-repeat center center fixed;
+  align-items: center;
+  background: linear-gradient(rgba(229, 45, 39, 0.5), rgba(229, 45, 39, 0.85)), url(../img/tv_bg.jpg) no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
   height: 25em;
+  justify-content: center;
   width: 100%; }
   header form#search-form {
     border: rgba(0, 0, 0, 0.5) 20px solid;
@@ -400,8 +400,8 @@ header {
         border-top: #850d11 1px solid; }
 
 main {
-  width: 60%;
-  margin: 1.25em auto; }
+  margin: 1.25em auto;
+  width: 60%; }
   main p {
     color: #e52d27;
     font-size: 1.5em; }
