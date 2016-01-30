@@ -74,9 +74,42 @@ header {
 
 main {
 	margin: em(20px) auto;
-	width: 60%;
+	width: 75%;
 	p {
 		color: $yt-red1;
 		font-size: em(24px);
+		margin-left: em(20px, 24px);
+	}
+	section.results {
+		display: flex;
+		flex-flow: row wrap;
+		align-content: center;
+		a {
+			text-decoration: none;
+			div {
+				margin: 0 em(20px) em(20px) em(20px);
+				width: 320px;
+				height: 180px;
+				background-size: cover;
+				border-radius: 16px;
+				border: rgba(darken($yt-red2, 50%), 0.1) 1px solid;
+				box-shadow: 0 0 0 0 rgba(darken($yt-red2, 15%), 0.5);
+				overflow: hidden;
+				transition: all 0.15s ease-in-out;
+				&:hover {
+					box-shadow: 0 6px 24px 0 rgba(darken($yt-red2, 15%), 0.5);
+					cursor: pointer;
+				}
+				h2 {
+					color: $yt-red1;
+					background: rgba(darken($yt-red2, 50%), 0.5);
+					font-size: em(24px);
+					font-weight: 300;
+					line-height: em(26px, 24px);
+					margin-top: 0;
+					padding: em(12px, 24px);
+				}
+			}
+		}
 	}
 }

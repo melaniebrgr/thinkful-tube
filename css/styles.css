@@ -401,7 +401,35 @@ header {
 
 main {
   margin: 1.25em auto;
-  width: 60%; }
+  width: 75%; }
   main p {
     color: #e52d27;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    margin-left: 0.8333333333em; }
+  main section.results {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center; }
+    main section.results a {
+      text-decoration: none; }
+      main section.results a div {
+        margin: 0 1.25em 1.25em 1.25em;
+        width: 320px;
+        height: 180px;
+        background-size: cover;
+        border-radius: 16px;
+        border: rgba(0, 0, 0, 0.1) 1px solid;
+        box-shadow: 0 0 0 0 rgba(109, 11, 14, 0.5);
+        overflow: hidden;
+        transition: all 0.15s ease-in-out; }
+        main section.results a div:hover {
+          box-shadow: 0 6px 24px 0 rgba(109, 11, 14, 0.5);
+          cursor: pointer; }
+        main section.results a div h2 {
+          color: #e52d27;
+          background: rgba(0, 0, 0, 0.5);
+          font-size: 1.5em;
+          font-weight: 300;
+          line-height: 1.0833333333em;
+          margin-top: 0;
+          padding: 0.5em; }
