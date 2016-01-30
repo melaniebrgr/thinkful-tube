@@ -1,0 +1,82 @@
+@import 'normalize';
+
+//variables
+$yt-red1: #e52d27;
+$yt-red2: #b31217;
+$black: #000000;
+$white: #fff;
+$browser-context: 16px;
+
+//functions
+@function em($px, $context: $browser-context) {
+	@if ( unitless($px) ) { $px: $px * 1px; }
+	@if ( unitless($context) ) { $context: $context * 1px; }
+	@return $px / $context * 1em;
+}
+
+//styles
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	background: linear-gradient(rgba($yt-red1, 0.25), rgba($yt-red1, 0.6)),
+		url(../img/tv_bg.jpg) no-repeat center center fixed;
+	background-size: cover;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	height: em(400px);
+	width: 100%;
+
+	form#search-form {
+		border: rgba(darken($yt-red2, 50%), 0.5) 20px solid;
+		border-radius: 16px;
+		display: flex;
+		input {
+			border: none;
+			font-size: em(34px);
+			height: em(60px, 34px);
+			padding-left: em(18px, 34px);
+			padding-right: em(18px, 34px); 
+		}
+		button {
+			background: $yt-red1;
+			// background: linear-gradient($yt-red1, $yt-red2);
+			border-top: lighten($yt-red1, 10%) 1px solid;
+			border-bottom: darken($yt-red2, 10%) 1px solid;
+			border-left: none;
+			border-right: none;
+			color: $white;
+			font-size: em(24px);
+			height: em(60px, 24px);
+			padding-left: em(18px, 24px);
+			padding-right: em(18px, 24px);
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				background: darken($yt-red1, 5%);
+			}
+			&:active {
+				border-bottom: lighten($yt-red1, 10%) 1px solid;
+				border-top: darken($yt-red2, 10%) 1px solid;
+			}
+		}
+	}
+}
+
+main {
+	width: 60%;
+	margin: em(20px) auto;
+	p {
+		color: $yt-red1;
+		font-size: em(24px);
+	}
+}
